@@ -4,8 +4,14 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Главная страница')
-
+    template = 'index.html'
+    title = 'Awesome title'
+    context = {
+        'title': 'Это главная страница проекта Yatube',
+        'text': 'Здесь будет информация о группах проекта Yatube'
+        }
+    return render(request, template, context) 
 
 def group_posts(request, any):
-    return HttpResponse('All the group posts are here')
+    return HttpResponse('Здесь будет информация о группах проекта Yatube')
+
