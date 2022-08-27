@@ -5,7 +5,7 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     template = 'index.html'
-    title = 'Awesome title'
+    title = 'This is the mainpage of the Yatube project'
     context = {
         'title': 'Это главная страница проекта Yatube',
         'text': 'Здесь будет информация о группах проекта Yatube'
