@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -8,13 +7,14 @@ def index(request):
     title = 'This is the mainpage of the Yatube project'
     context = {
         'title': title,
-        }
-    return render(request, template, context) 
+    }
+    return render(request, template, context)
+
 
 def group_posts(request, any):
     template = 'index.html'
     title = 'This is posts'
     context = {
         'title': title,
-        }
-    return render(request, template, context) 
+    }
+    return render(request, template, context)

@@ -1,4 +1,3 @@
-from re import template
 from django.shortcuts import get_object_or_404, render
 
 from posts.models import Post, Group
@@ -13,7 +12,7 @@ def index(request):
         'posts': posts,
         'title': title,
     }
-    return render(request, template, context) 
+    return render(request, template, context)
 
 
 def group_posts(request, slug):
@@ -26,4 +25,4 @@ def group_posts(request, slug):
         'posts': posts,
         'title': title,
     }
-    return render(request, template, context) 
+    return render(request, template, context)
