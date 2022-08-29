@@ -7,11 +7,14 @@ def index(request):
     template = 'index.html'
     title = 'This is the mainpage of the Yatube project'
     context = {
-        'title': 'Это главная страница проекта Yatube',
-        'text': 'Здесь будет информация о группах проекта Yatube'
+        'title': title,
         }
     return render(request, template, context) 
 
 def group_posts(request, any):
-    return HttpResponse('Здесь будет информация о группах проекта Yatube')
-
+    template = 'index.html'
+    title = 'This is posts'
+    context = {
+        'title': title,
+        }
+    return render(request, template, context) 
